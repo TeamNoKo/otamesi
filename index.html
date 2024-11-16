@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="BIOMOD Team NoKo">
+	<title>BIOMOD Team NoKo 2024</title>
+	<link rel="stylesheet" type="text/css" media="all" href="css/biomod.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+  <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+</head>
+<style>
+	div.section-panel {
+		background-color: #2d2d2ddc;
+		display: inline-block;
+		max-width: 100%;
+		width: 32%;
+		margin: 10px 2px;
+		position: relative;
+	}
+	div.nakami {
+		padding: 10px;
+	}
+	div.nakami p {
+		text-align: left;
+	}
+	.section-panel a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+	}
+
+	.section-panel {
+	border: solid 2px #767474;
+	}
+	.section-panel a:hover{/* マウスオーバー時に色変更*/
+	opacity: 0.1;
+	background-color: #fff;
+	}
+	.section-panel span{
+		color: cornflowerblue;
+	}
+</style>
+<body>
+
+
+	<header role="banner">
+		<div style="margin-left: 5%; position: relative;">
+			<a href="index.html" id="pseudo-logo"></a>
+			<video src="video/logo_animation.webm" poster="img/logo/Logo.png" webkit-playsinline playsinline muted id="teamLogoVideo" alt="Team-logo"></video>
+		</div>
+		<nav class="header">
+			<ul class="menu">
+				<li><a href="html/Project.html" class="big-category">Project</a>
+					<ul class="menuSub">
+						<li><a href="html/Project.html#Background">Background</a></li>
+						<li><a href="html/Project.html#Problem">Problem</a></li>
+						<li><a href="html/Project.html#Solution">Solution</a></li>
+						<li><a href="html/Project.html#Goals">Goals</a></li>
+					</ul>
+				</li>
+				<li><a href="html/Design.html" class="big-category">Design</a>
+					<ul class="menuSub">
+						<li><a href="html/Design.html#WhatBGB">What's the BGB</a></li>
+						<li><a href="html/Design.html#formBGB">To form BGB</a></li>
+						<li><a href="html/Design.html#formPores">To form pores</a></li>
+					</ul>
+				</li>
+				<li><a href="html/Experiment.html" class="big-category">Experiment</a>
+				<ul class="menuSub">
+					<li><a href="html/Experiment.html#MainResults">Main Results</a></li>
+					<li><a href="html/Experiment.html#BGB">BGB</a></li>
+					<li><a href="html/Experiment.html#Tubulation">Tubulation</a></li>
+					<li><a href="html/Experiment.html#MaterialsMethods">Methods</a></li>
+				</ul>
+				</li>
+				<li><a href="html/Future.html" class="big-category">Future</a>
+				<ul class="menuSub">
+					<li><a href="html/Future.html#NextSteps">Next Steps</a></li>
+					<li><a href="html/Future.html#Application">Application</a></li>
+				</ul>
+				</li>
+				<li><a href="html/ELSI.html" class="big-category">ELSI</a>
+					<ul class="menuSub">
+						<li><a href="html/ELSI.html#Introduction">Introduction</a></li>
+						<li><a href="html/ELSI.html#Ethical">Ethical</a></li>
+						<li><a href="html/ELSI.html#Legal">Legal</a></li>
+						<li><a href="html/ELSI.html#Social">Social</a></li>
+					</ul>
+					</li>
+				<li><a href="html/Team.html" class="big-category">Team</a>
+				</li>
+				<li><a href="html/Appendix.html" class="big-category">Appendix</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+<video id="background" poster="img/BGBchan.png" width="100%" webkit-playsinline playsinline muted autoplay loop style="display: flex; position: fixed; top:0; z-index:-10;">
+	<source src="video/BGBchan.mp4"  type="video/mp4">
+</video>
+
+<!-- <div class="bg">
+<h1 class="TextTyping">Bilayer Gel Bilayer</h1>
+</div> -->
+<main>
+	<article>
+	<section>
+		<div class="container">
+			<div class="right" style="width: 50%;">
+				<div class="container-img">
+					<video id="BGBvideo"  webkit-playsinline playsinline loop width="100%" muted poster="img/100_honban_BGBwithTube.png">
+						<source src="video/101_reversible_BGBwithTube.webm" type="video/webm">
+						<!-- <source src="video/0001-0100.mov" type="video/mov"> -->
+					</video>
+				</div>
+			</div>
+			<div style="width: 40%; margin: 70px 0 0 100px; letter-spacing: 2px">
+				<h1 class="title"><span style="color:red;">B</span>ilayer</h1>
+				<h1 class="title"><span style="color:lightgreen;">G</span>el</h1>
+				<h1 class="title"><span style="color:blue;">B</span>ilayer</h1>
+			</div>
+		</div>
+	</section>
+    <section id="Abstract">
+		<h2>Abstract</h2>
+			<p>Liposomes are expected to serve as chassis and reactors in constructing drug delivery systems<sup class="reference"><a href="#Reference_1" class="refLink">&#91;1&#93;</a></sup><sup class="reference"><a href="#Reference_2" class="refLink">&#91;2&#93;</a></sup>and molecular robots<sup class="reference"><a href="#Reference_3" class="refLink">&#91;3&#93;</a></sup> by encapsulating drug molecules or various designed biomolecules. Conventional liposomes are sensitive to external stresses such as changes in osmotic pressure<sup class="reference"><a href="#Reference_4" class="refLink">&#91;4&#93;</a></sup> and pH. To extend the application field, an increase in the stability of liposomes is required.  Previous research has enhanced the stability of liposomes using DNA hydrogel<sup class="reference"><a href="#Reference_5" class="refLink">&#91;5&#93;</a></sup> or PEG-modified lipids<sup class="reference"><a href="#Reference_6" class="refLink">&#91;6&#93;</a></sup><sup class="reference"><a href="#Reference_7" class="refLink">&#91;7&#93;</a></sup><sup class="reference"><a href="#Reference_8" class="refLink">&#91;8&#93;</a></sup> on the membrane. However, these modifications might inhibit molecular transport through liposome membranes, which is essential for future applications in constructing artificial cells and molecular robots.</p>
+			<p>In this project, we developed a “BGB (Bilayer-Gel-Bilayer)” structure to solve these problems. BGB is a capsule-like structure consisting of three layers in the following order: an inner lipid bilayer, a DNA hydrogel layer, and an outer lipid bilayer. The BGB structure increases the stability of liposomes without disrupting the inner components. BGBs were prepared with a yield of nearly 100%, and their stability was evaluated to be greater than that of conventional liposomes in various conditions. Furthermore, we propose a method for forming pores in the BGB structures using DNA-origami curls. In a previous study, the tubulation of the vesicle membrane was induced by polymerization of monomer DNA-origami curls attached to the membrane surface of liposomes<sup class="reference"><a href="#Reference_9" class="refLink">&#91;9&#93;</a></sup>. Using this strategy, we constructed a theoretical framework to form pores by connecting the inner and outer bilayers of the BGB structure. Unlike conventional DNA origami nanopores, our pore system is protected by DNA hydrogel. We expect that this protection will make the formed pore more stable in various environments. Our BGB structure will expand the application field of liposomes under more extreme conditions.</p>
+    </section>
+	<section id="many-box">
+		<div class="container">
+			<div class="section-panel observed-panel">
+				<div class="nakami">
+					<img src="img/project.png" class="Fig2">
+					<h3>Project</h3>
+					<p>We want to make liposomes more stable and robust. Inspired by the nuclear membrane, we developed the BGB.</p>
+					<div class="text" aria-hidden="true">
+					  <span class="char" style="--char-index: 0"> R </span>
+				  
+					  <span class="char" style="--char-index: 1"> e </span>
+				  
+					  <span class="char" style="--char-index: 2"> a </span>
+				  
+					  <span class="char" style="--char-index: 3"> d </span>
+				  
+					  <span class="char" style="--char-index: 4">&nbsp;</span>
+				  
+					  <span class="char" style="--char-index: 5"> m </span>
+				  
+					  <span class="char" style="--char-index: 6"> o </span>
+				  
+					  <span class="char" style="--char-index: 7"> r </span>
+				  
+					  <span class="char" style="--char-index: 8"> e </span>
+ 				  
+					  <span class="char" style="--char-index: 9">&nbsp;</span>
+				  
+					  <span class="char" style="--char-index: 10"> → </span>
+					</div>
+					<a href="html/Project.html" style="color:#cccccc;"></a>
+				</div>
+			</div>
+			<div class="section-panel">
+				<div class="nakami">
+					<img src="img/design.png" class="Fig3">
+					<h3>Design</h3>
+					<p>We considered the requirements for the production of BGB and designed DNA hydrogel and DNA origami.</p>
+					<div class="text" aria-hidden="true">
+					  <span class="char" style="--char-index: 0"> R </span>
+				  
+					  <span class="char" style="--char-index: 1"> e </span>
+				  
+					  <span class="char" style="--char-index: 2"> a </span>
+				  
+					  <span class="char" style="--char-index: 3"> d </span>
+				  
+					  <span class="char" style="--char-index: 4">&nbsp;</span>
+				  
+					  <span class="char" style="--char-index: 5"> m </span>
+				  
+					  <span class="char" style="--char-index: 6"> o </span>
+				  
+					  <span class="char" style="--char-index: 7"> r </span>
+				  
+					  <span class="char" style="--char-index: 8"> e </span>
+ 				  
+					  <span class="char" style="--char-index: 9">&nbsp;</span>
+				  
+					  <span class="char" style="--char-index: 10"> → </span>
+					</div>
+					<a href="html/Design.html" style="color:#cccccc;"></a>
+				</div>
+			</div>
+			<div class="section-panel" id="Section-panel3">
+				<div class="nakami">
+					<video src="video/lipochan2.mp4" webkit-playsinline playsinline muted id="CardVideo3"></video>
+					<h3>Experiment</h3>
+					<p>We will show you the experimental results carried out this summer. We are sure you will be amazed.</p>
+					<div class="text" aria-hidden="true">
+					  <span class="char" style="--char-index: 0"> R </span>
+				  
+					  <span class="char" style="--char-index: 1"> e </span>
+				  
+					  <span class="char" style="--char-index: 2"> a </span>
+				  
+					  <span class="char" style="--char-index: 3"> d </span>
+				  
+					  <span class="char" style="--char-index: 4">&nbsp;</span>
+				  
+					  <span class="char" style="--char-index: 5"> m </span>
+				  
+					  <span class="char" style="--char-index: 6"> o </span>
+				  
+					  <span class="char" style="--char-index: 7"> r </span>
+				  
+					  <span class="char" style="--char-index: 8"> e </span>
+ 				  
+					  <span class="char" style="--char-index: 9">&nbsp;</span>
+				  
+					  <span class="char" style="--char-index: 10"> → </span>
+					</div>
+					<a href="html/Experiment.html" style="color:#cccccc;"></a>
+				</div>
+			</div>
+			<div class="section-panel observed-panel">
+				<div class="nakami">
+					<img src="img/future.jpg" class="Fig3">
+					<h3>Future</h3>
+					<p> We will introduce the next steps of our experiment and applications of BGB in the future.</p>
+					<div class="text" aria-hidden="true">
+					  <span class="char" style="--char-index: 0"> R </span>
+				  
+					  <span class="char" style="--char-index: 1"> e </span>
+				  
+					  <span class="char" style="--char-index: 2"> a </span>
+				  
+					  <span class="char" style="--char-index: 3"> d </span>
+				  
+					  <span class="char" style="--char-index: 4">&nbsp;</span>
+				  
+					  <span class="char" style="--char-index: 5"> m </span>
+				  
+					  <span class="char" style="--char-index: 6"> o </span>
+				  
+					  <span class="char" style="--char-index: 7"> r </span>
+				  
+					  <span class="char" style="--char-index: 8"> e </span>
+ 				  
+					  <span class="char" style="--char-index: 9">&nbsp;</span>
+				  
+					  <span class="char" style="--char-index: 10"> → </span>
+					</div>
+					<a href="html/Future.html" style="color:#cccccc;"></a>
+				</div>
+			</div>
+			<div class="section-panel">
+				<div class="nakami">
+					<img src="img/elsi.png" class="Fig3">
+					<h3>ELSI</h3>
+					<p>BGB structure is innovative, but that is why some things need to be considered from the ELSI perspective.</p>
+					<div class="text" aria-hidden="true">
+					  <span class="char" style="--char-index: 0"> R </span>
+				  
+					  <span class="char" style="--char-index: 1"> e </span>
+				  
+					  <span class="char" style="--char-index: 2"> a </span>
+				  
+					  <span class="char" style="--char-index: 3"> d </span>
+				  
+					  <span class="char" style="--char-index: 4">&nbsp;</span>
+				  
+					  <span class="char" style="--char-index: 5"> m </span>
+				  
+					  <span class="char" style="--char-index: 6"> o </span>
+				  
+					  <span class="char" style="--char-index: 7"> r </span>
+				  
+					  <span class="char" style="--char-index: 8"> e </span>
+ 				  
+					  <span class="char" style="--char-index: 9">&nbsp;</span>
+				  
+					  <span class="char" style="--char-index: 10"> → </span>
+					</div>
+					<a href="html/ELSI.html" style="color:#cccccc;"></a>
+				</div>
+			</div>
+			<div class="section-panel" id="Section-panel6">
+				<div class="nakami">
+					<video src="video/Team.mp4" webkit-playsinline playsinline muted id="CardVideo6"></video>
+					<h3>Team</h3>
+					<p>We are Team NoKo! Our team consists of eight undergraduates: three juniors, three sophomores, and two freshmen.
+					</p>
+					<div class="text" aria-hidden="true">
+						<span class="char" style="--char-index: 0"> R </span>
+					
+						<span class="char" style="--char-index: 1"> e </span>
+					
+						<span class="char" style="--char-index: 2"> a </span>
+					
+						<span class="char" style="--char-index: 3"> d </span>
+					
+						<span class="char" style="--char-index: 4">&nbsp;</span>
+					
+						<span class="char" style="--char-index: 5"> m </span>
+					
+						<span class="char" style="--char-index: 6"> o </span>
+					
+						<span class="char" style="--char-index: 7"> r </span>
+					
+						<span class="char" style="--char-index: 8"> e </span>
+					 
+						<span class="char" style="--char-index: 9">&nbsp;</span>
+					
+						<span class="char" style="--char-index: 10"> → </span>
+					  </div>
+					<a href="html/Team.html" style="color:#cccccc;"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+		 
+	<section>
+		<h2>Youtube Video</h2>
+		<iframe src="https://www.youtube.com/embed/H1FIfFoxq9E?si=fUGpxPT847uvOh3x" class="concept-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</section>
+    <section id="Reference">
+		<h2>Reference</h2>
+		<ol class="reference_ol">
+			<li id="Reference_1"><a target="_blank" href="https://doi.org/10.1073/pnas.77.7.4089"> LEE D. LESERMAN, JOHN N. WEINSTEIN, ROBERT BLUMENTHAL, AND WILLIAM D. TERRY, <i>PNAS</i>, 1980, <b>Vol. 77, No. 7</b>, 4089-4093.</a></li>
+			<li id="Reference_2"><a target="_blank" href="https://doi.org/10.1021/bi00517a043"> Francis J. Martin, Wayne L. Hubbell and Demetrios Papahadjopoulos, <i>Biochemistry</i>, 1981, <b>20, 14</b>, 4229-4238.</a></li>
+			<li id="Reference_3"><a target="_blank" href="https://doi.org/10.1039/D3LC00860F"> Zugui Peng, Shoji Iwabuchi, Kayano Izumi, Sotaro Takiguchi, Misa Yamaji, Shoko Fujita, Harune Suzuki, Fumika Kambara, Genki Fukasawa, Aileen Cooney, Lorenzo Di Michele, Yuval Elani, Tomoaki Matsuura and Ryuji Kawano, <i>Lab Chip</i>, 2024, <b>24</b>, 996-1929.</a></li>
+			<li id="Reference_4"><a target="_blank" href="https://doi.org/10.1140/epje/i2006-10029-9"> J. Sabın, G. Prieto, J. M. Ruso, R. Hidalgo-Álvarez and F. Sarmiento, <i>The European Physical Journal E</i>, 2006, <b>Volume 20</b>, 401-408.</a></li>
+			<li id="Reference_5"><a target="_blank" href="https://doi.org/10.1073/pnas.1702208114"> Chikako Kurokawa, Kei Fujiwara, Masamune Morita, Ibuki Kawamata, Yui Kawagishi, Atsushi Sakai, Yoshihiro Murayama, Shin-ichiro M. Nomura, Satoshi Murata, Masahiro Takinoue, and Miho Yanagisawa, <i>PNAS</i>, 2017, <b>114(28)</b>, 7228-7233.</a></li>
+			<li id="Reference_6"><a target="_blank" href="https://doi.org/10.1016/0014-5793(90)81016-h">A L Klibanov, K Maruyama, V P Torchilin and L Huang, <i>FEBS Letters</i>, 1990, <b>268(1)</b>, 235-7.</a></li>
+			<li id="Reference_7"><a target="_blank" href="https://doi.org/10.1021/acsomega.3c10346"> Kayano Izumi, Jiajue Ji, Keiichiro Koiwai and Ryuji Kawano, <i>ACS OMEGA</i>, 2024, <b>9, 9</b>, 10958-10966.</a></li>
+			<li id="Reference_8"><a target="_blank" href="https://doi.org/10.1073/pnas.88.24.11460"> D Papahadjopoulos, T M Allen, A Gabizon, E Mayhew, K Matthay, S K Huang, K D Lee, M C Woodle, D D Lasic and C Redemann, <i>PNAS</i>, 1991, <b>88(24)</b>, 11460-11464.</a></li>
+			<li id="Reference_9"><a target="_blank" href="https://doi.org/10.1002/anie.201800141"> Michael W. Grome, Dr. Zhao Zhang, Dr. Frédéric Pincet, Prof. Chenxiang Lin, <i>Angew. Chem. Int. Ed.</i>, 2018, <b>Volume 57, Issue 19</b>, 5330-5334.</a></li>		  
+		</ol>
+	  </section>
+	</article>
+	
+	<div class="sidebar">
+		<label id="video_play_pause">
+			<input type="checkbox">
+			<span></span>
+		</label>
+		<button id="scrollToTopBtn">Top</button>
+	</div>
+
+</main>
+
+  <footer>
+		<section class="footer">
+
+			<div class="footer-info" style="position: relative;">
+				<img src="img/biohacker_kun/ハッカー君6.png" style="position: absolute; width: 10%; left: -40px; bottom: 0px;">
+				<ul style="margin-left: 50%;">
+					<li class="footer-link"><a href="https://github.com/Argon399481/BIOMOD2024_wiki" target="_blank"><img class="under_li" src="img/icon/github.png"></a></li>
+					<li class="footer-link"><a href="https://x.com/BiomodTeamNoKo" target="_blank"><img class="under_li" src="img/icon/twitterx.png"></a></li>
+					<li class="footer-link"><a href="https://www.instagram.com/biomod_teamNoKo/" target="_blank"><img class="under_li" src="img/icon/instagram.png"></a></li>
+				</ul>
+				<ul class="SpecialThanks">
+					<li class="Thanks"><a href="https://www.tuat.ac.jp/en/" target="_blank"><img class="under_li" style="padding-top: 25%;" src="img/logo/Logo_TUAT_English.png"></a></li>
+					<li class="Thanks"><a href="https://web.tuat.ac.jp/~rjkawano/index_en.html" target="_blank"><img class="under_li" src="img/logo/logo_kawano_lab.png"></a></li>
+					<li class="Thanks"><a href="https://www.mext.go.jp/a_menu/shinkou/hojyo/main5_a5.htm" target="_blank"><img class="under_li" style="padding-top: 21%;" src="img/logo/KAKENHIlogoM_v2.jpg"></a></li>
+					<li class="Thanks" style="width: 50%;"><a href="https://bottomup-biotech.elsi.jp/en/" target="_blank"><img class="under_li" style="padding-top: 10.5%;" src="img/logo/Logo_gakuhen.png"></a></li>
+				</ul>
+			</div>
+			<small>&copy;BIOMOD Team NoKo 2024</a></small>
+		</section>
+	</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/shuffle-text@0.3.0/build/shuffle-text.min.js"></script>
+<script src="js/biomod.js"></script>
+<script>
+	// オープニングアニメーション
+// TextTypingというクラス名がついている子要素（span）を表示から非表示にする定義
+function TextTypingAnime() {
+	$('.TextTyping').each(function () {
+		var elemPos = $(this).offset().top - 50;
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		var thisChild = "";
+		if (scroll >= elemPos - windowHeight) {
+			thisChild = $(this).children(); //spanタグを取得
+			//spanタグの要素の１つ１つ処理を追加
+			thisChild.each(function (i) {
+				var time = 100;
+				//時差で表示する為にdelayを指定しその時間後にfadeInで表示させる
+				$(this).delay(time * i).fadeIn(time);
+			});
+		} else {
+			thisChild = $(this).children();
+			thisChild.each(function () {
+				$(this).stop(); //delay処理を止める
+				$(this).css("display", "none"); //spanタグ非表示
+			});
+		}
+	});
+}
+
+$(document).ready(function () {
+	//spanタグを追加する
+	var element = $(".TextTyping");
+	element.each(function () {
+		var text = $(this).html();
+		var textbox = "";
+		text.split('').forEach(function (t) {
+			if (t !== " ") {
+				textbox += '<span>' + t + '</span>';
+			} else {
+				textbox += t;
+			}
+		});
+		$(this).html(textbox);
+
+	});
+
+	TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
+});// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+
+var arr = []
+//初期値の設定
+function TypingInit() {
+	$('.js_typing').each(function (i) { //js_typingクラスを全て処理をおこなう
+		arr[i] = new ShuffleText(this);//動作させるテキストを配列に格納
+	});
+}
+
+// BGBの動き遅くする奴
+$(window).on('load', function () {
+	var videoElem = document.getElementById('BGBvideo');
+	videoElem.playbackRate = 0.3;
+	videoElem.play();
+});
+
+
+for (let i = 1; i <= 6; i++) {
+  const CardVideo = document.getElementById(`CardVideo${i}`);
+  const Carddiv = document.getElementById(`Section-panel${i}`);
+  
+  window.addEventListener('load', () => {
+    CardVideo.currentTime = 10.75;
+  });
+
+  Carddiv.addEventListener("mouseover", () => {
+    CardVideo.currentTime = 0;
+    CardVideo.play();
+  });
+
+  Carddiv.addEventListener("mouseout", () => {
+    CardVideo.pause();
+    CardVideo.currentTime = 10.75;
+  });
+}
+</script>
+</body>
+
+</html>
